@@ -28,7 +28,7 @@ const CheckIcon = styled(FaCheckCircle)`
   color: ${props => (props.completed ? "green" : "gray")};
 
   &:hover {
-    fill: green;
+    fill: lightgreen;
   }
 `
 
@@ -51,6 +51,10 @@ const TodoTitle = styled.p`
 
   color: ${props => (props.completed ? "green" : "white")};
   text-decoration: ${props => (props.completed ? "line-through" : "none")};
+
+  &:hover {
+    color: ${props => (props.completed ? "green" : "lightgreen")};
+  }
 `
 
 let TodoItem = ({ todo, changeTodo, removeTodo }) => {
